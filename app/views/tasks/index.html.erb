@@ -1,0 +1,16 @@
+<h1>Tasks:</h1>
+
+<!-- We have an array with all tasks -->
+<ul>
+  <% @tasks.each do |task| %>
+    <li>
+      <%= link_to task.title, task_details_path(task)%>
+      <!-- task_details_path(task) this prefix was given by me on show on route -->
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to '📌Create new task', tasks_new_path %>
+
+
+
